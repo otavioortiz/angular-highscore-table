@@ -1,0 +1,17 @@
+.score-adder-div{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.score-adder-div mat-form-field{
+  vertical-align: bottom;
+  padding: 10px;
+}
+
+.score-adder-div button{
+  padding: 5px;
+  margin: 30px;
+  vertical-align: top;
+}
+

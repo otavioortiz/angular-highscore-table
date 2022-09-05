@@ -1,0 +1,20 @@
+<div class="score-adder-div">
+
+    <form [formGroup]="scoreForm" (submit)="submit()">
+        <mat-form-field appearance="standard">
+            <mat-label>Nome do usuário</mat-label>
+            <input type="text" formControlName="name" [(ngModel)]="name" matInput placeholder="Ronaldo">
+            <small *ngIf="scoreForm.get('name')?.hasError('required')">Este campo não pode ser vazio</small>
+            <small *ngIf="scoreForm.get('name')?.hasError('minlength')">Este campo precisa de no mínimo 3 caracteres</small>
+        </mat-form-field>
+        
+        <mat-form-field appearance="standard">
+            <mat-label>Pontuação</mat-label>
+            <input type="number" formControlName="score" [(ngModel)]="score" matInput placeholder="999" required minlength="1">
+            <small *ngIf="scoreForm.get('score')?.hasError('required')">Este campo não pode ser vazio</small>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" color="accent">Enviar</button>
+    </form>
+
+</div>
